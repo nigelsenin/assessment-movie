@@ -157,6 +157,7 @@ public class MovieController {
 				.orElseThrow(() -> new ResourceNotFoundException("Movie", "id", movId));
 
 		movieRepository.delete(movie);
+		movieGenreRepository.deleteByMovId(movId);
 		return ResponseEntity.ok().build();
 	}
 }
