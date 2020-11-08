@@ -18,7 +18,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class MovieGenre implements Serializable {
 
 	private static final long serialVersionUID = 1967806040470477421L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long movGenId;
@@ -28,11 +28,11 @@ public class MovieGenre implements Serializable {
 
 	@NotBlank
 	private Long genId;
-	
+
 	public MovieGenre() {
-		
+
 	}
-	
+
 	public MovieGenre(Long movId, Long genId) {
 		this.movId = movId;
 		this.genId = genId;
@@ -61,6 +61,5 @@ public class MovieGenre implements Serializable {
 	public void setGenId(Long genId) {
 		this.genId = genId;
 	}
-	
 
 }

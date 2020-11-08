@@ -12,7 +12,7 @@ public class InvalidRequestException extends RuntimeException {
 	private Object fieldValue;
 
 	public InvalidRequestException(String fieldName, Object fieldValue) {
-		super(String.format("Invalid request for %s : '%s'", fieldName, fieldValue));
+		super(String.format("Invalid request body for %s : '%s'", fieldName, fieldValue));
 		this.fieldName = fieldName;
 		this.fieldValue = fieldValue;
 	}
